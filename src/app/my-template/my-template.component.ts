@@ -36,9 +36,9 @@ export class MyTemplateComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(MyFormComponent, {
       width: '550px',
-      height: '500px',
+      height: '550px',
       data: { name: this.name, animal: this.animal },
-      // disableClose: true,
+      disableClose: false,
     });
 
     dialogRef.afterClosed().subscribe(result => {
