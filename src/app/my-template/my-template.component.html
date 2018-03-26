@@ -4,7 +4,7 @@
     <div class="container fixed-top ">
       <div class="row menu-nav">
 
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-md-12 col-lg-12">
 
           <nav class="navbar navbar-expand-lg navbar-light">
             <div class="nav menu-img">
@@ -21,19 +21,19 @@
             <div class="collapse navbar-collapse menu-right" id="navbarNavDropdown">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a pageScroll class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a pageScroll class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Blog</a>
+                  <a class="nav-link" href="#" (click)="openDialog()">Login</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" (click)="openDialog()">Login</a>
+                  <a class="nav-link" href="#" (click)="openForRg()">Register</a>
                 </li>
                 <li class="nav-item dropdown">
                 </li>
@@ -49,7 +49,7 @@
     <div class="nen">
       <div class="container ">
         <div class="row title-t justify-content-center text-center">
-          <div class="col-12 col-sm-8 col-md-8 col-lg-8 titleall">
+          <div class=" col-sm-8 col-md-8 col-lg-8 titleall">
             <h2 class="t-sub clorWhite">New Branding Agency</h2>
             <h1 class="t-sub2 clorWhite">We are about to change the way
               <br>
@@ -59,6 +59,13 @@
             <a href="#" class="dowloadCk">
               <button type="button" class="btn btn-dark">Free Download</button>
             </a>
+            <div class="row kaka">
+              <div class=" col-md-12 col-lg-12">
+                <a href="#about" class="scroll" pageScroll>
+                  <i class="fas fa-chevron-circle-down"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -66,11 +73,11 @@
   </section>
   <!-- end-slide-anh -->
 </header>
-<section class="bg-white">
+<section class="bg-white" id="about">
   <div class="container">
     <div class="row justify-content-center">
 
-      <div class="col-12 col-sm-8 col-md-8 col-lg-8 text-center">
+      <div class="col-sm-8 col-md-8 col-lg-8 text-center">
         <h2 class="disp1">About Our Agency</h2>
         <p class="pipe">We are a new design studio based in USA. We have over 20 years of combined experience, and know a thing or two about
           designing websites and mobile apps. Clever use of technology and lean processes enable us to work faster and smarter.
@@ -84,7 +91,7 @@
 <section class="bg-dark">
   <div class="container">
     <div class="row bg-dark-p">
-      <div class="col-12 col-sm-12 col-md-6 col-lg-3 widthdark">
+      <div class="  col-md-6 col-lg-3 widthdark">
         <div class="row">
           <div class="col-2 col-sm-2 col-md-2 col-lg-2 galaxy">
             <i class="fas fa-briefcase clorWhite"></i>
@@ -95,7 +102,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-3 widthdark">
+      <div class="  col-md-6 col-lg-3 widthdark">
         <div class="row">
           <div class="col-2 col-sm-2 col-md-2 col-lg-2 galaxy">
             <i class="far fa-clock clorWhite"></i>
@@ -106,7 +113,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-3 widthdark">
+      <div class="  col-md-6 col-lg-3 widthdark">
         <div class="row">
           <div class="col-2 col-sm-2 col-md-2 col-lg-2 galaxy">
             <i class="far fa-star clorWhite"></i>
@@ -117,7 +124,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-3 widthdark">
+      <div class="  col-md-6 col-lg-3 widthdark">
         <div class="row">
           <div class="col-2 col-sm-2 col-md-2 col-lg-2 galaxy">
             <i class="far fa-heart clorWhite"></i>
@@ -146,7 +153,7 @@
     </div>
     <!-- Best Projects -->
     <div class="row">
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 pd">
+      <div class="  col-md-6 col-lg-4 pd">
         <a href="#">
           <div class="product-container">
             <img src="../assets/images/portfolio-7-sm.jpg">
@@ -160,7 +167,7 @@
           </div>
         </a>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 pd">
+      <div class="  col-md-6 col-lg-4 pd">
         <a href="#">
           <div class="product-container">
             <img src="../assets/images/portfolio-2-sm.jpg">
@@ -174,7 +181,7 @@
           </div>
         </a>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 pd">
+      <div class="  col-md-6 col-lg-4 pd">
         <a href="#">
           <div class="product-container">
             <img src="../assets/images/portfolio-9-sm.jpg">
@@ -188,7 +195,7 @@
           </div>
         </a>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 pd">
+      <div class="  col-md-6 col-lg-4 pd">
         <a href="#">
           <div class="product-container">
             <img src="../assets/images/portfolio-3-sm.jpg">
@@ -202,7 +209,7 @@
           </div>
         </a>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 pd">
+      <div class="  col-md-6 col-lg-4 pd">
         <a href="#">
           <div class="product-container">
             <img src="../assets/images/portfolio-4-sm.jpg">
@@ -216,7 +223,7 @@
           </div>
         </a>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 pd">
+      <div class="  col-md-6 col-lg-4 pd">
         <a href="#">
           <div class="product-container">
             <img src="../assets/images/portfolio-5-sm.jpg">
@@ -230,7 +237,7 @@
           </div>
         </a>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 pd">
+      <div class="  col-md-6 col-lg-4 pd">
         <a href="#">
           <div class="product-container">
             <img src="../assets/images/portfolio-6-sm.jpg">
@@ -244,7 +251,7 @@
           </div>
         </a>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 pd">
+      <div class="  col-md-6 col-lg-4 pd">
         <a href="#">
           <div class="product-container">
             <img src="../assets/images/portfolio-7-sm.jpg">
@@ -258,7 +265,7 @@
           </div>
         </a>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 pd">
+      <div class="  col-md-6 col-lg-4 pd">
         <a href="#">
           <div class="product-container">
             <img src="../assets/images/portfolio-8-sm.jpg">
@@ -327,40 +334,48 @@
     </div>
     <div class="row">
 
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-        <div class="card" style="width: 22rem;">
-          <img class="card-img-top img-x" src="../assets/images/post-4-mid.jpg" alt="Card image cap">
-          <a href="#" class="dowloadCk2">
-            <button type="button" class="btn btn-dark">Nature</button>
-          </a>
+      <div class="  col-md-6 col-lg-4">
+        <div class="card card2">
+          <div class="fix-btn">
+            <img class="card-img-top img-x" src="../assets/images/post-4-mid.jpg" alt="Card image cap">
+            <a href="#" class="dowloadCk2">
+              <button type="button" class="btn btn-dark btn1">Nature</button>
+            </a>
+          </div>
           <div class="card-body">
-            <h5 class="card-title tite-w">Why you should Always First</h5>
+            <h5 class="card-title tite-w nx-hove">
+              <a href="">Why you should Always First</a>
+            </h5>
             <p>August 14, 2016</p>
             <p class="card-text pipe">Lights give have herb. First. Seed lesser his a fruit. Stars good divide fish appear don't, third deep.</p>
           </div>
         </div>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-        <div class="card" style="width: 22rem;">
+      <div class="  col-md-6 col-lg-4">
+        <div class="card card2">
           <img class="card-img-top img-x" src="../assets/images/post-3-mid.jpg" alt="Card image cap">
           <a href="#" class="dowloadCk2">
-            <button type="button" class="btn btn-dark">Nature</button>
+            <button type="button" class="btn btn-dark btn1">Nature</button>
           </a>
           <div class="card-body">
-            <h5 class="card-title tite-w">Why you should Always First</h5>
+            <h5 class="card-title tite-w nx-hove">
+              <a href="">Why you should Always First</a>
+            </h5>
             <p>August 14, 2016</p>
             <p class="card-text pipe">Lights give have herb. First. Seed lesser his a fruit. Stars good divide fish appear don't, third deep.</p>
           </div>
         </div>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-        <div class="card" style="width: 22rem;">
+      <div class="  col-md-6 col-lg-4">
+        <div class="card card2">
           <img class="card-img-top img-x" src="../assets/images/post-1-mid.jpg" alt="Card image cap">
           <a href="#" class="dowloadCk2">
-            <button type="button" class="btn btn-dark">Nature</button>
+            <button type="button" class="btn btn-dark btn1">Nature</button>
           </a>
           <div class="card-body">
-            <h5 class="card-title tite-w">Why you should Always First</h5>
+            <h5 class="card-title tite-w nx-hove">
+              <a href="">Why you should Always First</a>
+            </h5>
             <p>August 14, 2016</p>
             <p class="card-text pipe">Lights give have herb. First. Seed lesser his a fruit. Stars good divide fish appear don't, third deep.</p>
           </div>
@@ -370,43 +385,51 @@
   </div>
 </div>
 <!-- end-box-flex -->
-<section class="contact-info">
+<section class="contact-info" id="contact">
   <div class="container contact-c">
     <div class="row">
-      <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+      <div class="  col-md-5 col-lg-5">
         <h2 class="dp-contac disp2">Contact Info:</h2>
-        <p>Praesent interdum congue mauris, et fringilla lacus pel vitae. Quisque nisl mauris, aliquam eu ultrices vel, conse
+        <p class="pipe">Praesent interdum congue mauris, et fringilla lacus pel vitae. Quisque nisl mauris, aliquam eu ultrices vel, conse
           vitae sapien at imperdiet risus. Quisque cursus risus id. fermentum, in auctor quam consectetur.</p>
         <ul class="list-contact">
-          <li>
-            <strong>Address:</strong> 10111 Santa Monica Boulevard, LA</li>
-          <li>
-            <strong>Phone:</strong> +44 987 065 908</li>
-          <li>
-            <strong>Email:</strong> info@Example.com</li>
-          <li>
-            <strong>Fax:</strong> +44 987 065 909 </li>
+          <li class="pipe1">
+            <strong>Address:</strong>
+            <span> 10111 Santa Monica Boulevard, LA</span>
+          </li>
+          <li class="pipe1">
+            <strong>Phone:</strong>
+            <span> +44 987 065 908</span>
+          </li>
+          <li class="pipe1">
+            <strong>Email:</strong>
+            <span> info@Example.com</span>
+          </li>
+          <li class="pipe1">
+            <strong>Fax:</strong>
+            <span> +44 987 065 909 </span>
+          </li>
         </ul>
       </div>
-      <div class="col-12 col-sm-12 col-md-7 col-lg-7">
+      <div class="  col-md-7 col-lg-7">
         <form action="">
           <div class="row">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+            <div class=" col-sm-6 col-md-6 col-lg-6">
               <div class="form-group group-p">
-                <input type="text" name="" id="" class="form-control focus-f" placeholder="Your Name" aria-describedby="helpId">
+                <input type="text" name="name" id="name" class="form-control focus-f" placeholder="Your Name" aria-describedby="helpId">
               </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+            <div class=" col-sm-6 col-md-6 col-lg-6">
               <div class="form-group group-p">
-                <input type="text" name="" id="" class="form-control focus-f" placeholder="Your Email" aria-describedby="helpId">
+                <input type="text" name="mail" id="mail" class="form-control focus-f" placeholder="Your Email" aria-describedby="helpId">
               </div>
             </div>
           </div>
           <div class="form-group group-p">
-            <input type="text" name="" id="" class="form-control focus-f" placeholder="Your Email" aria-describedby="helpId">
+            <input type="text" name="title" id="title" class="form-control focus-f" placeholder="Your Title" aria-describedby="helpId">
           </div>
           <div class="form-group group-p">
-            <textarea class="form-control focus-f" name="" id="" rows="3" placeholder="Your Comment"></textarea>
+            <textarea class="form-control focus-f" name="comment" id="comment" rows="3" placeholder="Your Comment"></textarea>
           </div>
           <a href="#" class="dowloadCk">
             <button type="button" class="btn btn-dark">Send Message</button>
@@ -419,8 +442,30 @@
 <footer class="footerd">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-
+      <div class="  col-md-12 col-lg-12 text-center">
+        <ul class="item">
+          <li>
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-nintendo-switch"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+        </ul>
+        <p class="text-p pipe">2016-2017 © Design by Unvab. Code by nK</p>
       </div>
     </div>
   </div>

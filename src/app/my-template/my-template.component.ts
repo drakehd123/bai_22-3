@@ -4,6 +4,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 // phan them
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { MyFormComponent } from '../my-form/my-form.component';
+import { FormRegisterComponent } from '../form-register/form-register.component';
 // end phan them
 
 
@@ -13,8 +14,9 @@ import { MyFormComponent } from '../my-form/my-form.component';
   styleUrls: ['./my-template.component.scss']
 })
 export class MyTemplateComponent implements OnInit {
+  dialogRef: any;
   active;
-  animal: string;
+  // animal: string;
   name: string;
 
   constructor(public dialog: MatDialog) {}
@@ -36,16 +38,22 @@ export class MyTemplateComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(MyFormComponent, {
       width: '550px',
-      height: '550px',
-      data: { name: this.name, animal: this.animal },
-      disableClose: false,
+      // height: '550px',
+      // data: { name: this.name, animal: this.animal },
+      disableClose: true,
     });
-
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.animal = result;
+      // this.animal = result;
     });
+    // this.dialogRef.close();
   }
   // end open
+  openForRg(): void {
+    const dialogRef = this.dialog.open(FormRegisterComponent, {
+      width: '550px',
+      height: '55px;',
+    });
+  }
 
 }
