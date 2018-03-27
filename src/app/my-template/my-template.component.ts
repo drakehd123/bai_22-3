@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 
 
 // phan them
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MyFormComponent } from '../my-form/my-form.component';
 import { FormRegisterComponent } from '../form-register/form-register.component';
 // end phan them

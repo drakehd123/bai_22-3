@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 // phan them
-import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { FormGroup, FormControl, Validators, FormBuilder, FormArray } from '@angular/forms';
 
 // end phan
