@@ -6,7 +6,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { MyFormComponent } from '../my-form/my-form.component';
 import { FormRegisterComponent } from '../form-register/form-register.component';
 // end phan them
-
+import { FormGroup, FormControl, Validators, FormBuilder, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-my-template',
@@ -16,12 +16,25 @@ import { FormRegisterComponent } from '../form-register/form-register.component'
 export class MyTemplateComponent implements OnInit {
   dialogRef: any;
   active;
+  rfFormContact: FormGroup;
+  color1 = true;
   // animal: string;
   name: string;
-
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    public dialog: MatDialog,
+    private ct: FormBuilder,
+  ) { }
 
   ngOnInit() {
+    this.rfFormContact = this.ct.group({
+      name: ['', [Validators.required, Validators.minLength(6)]],
+      email: ['', [Validators.required, Validators.email]],
+      title: ['', [Validators.required, Validators.minLength(10)]],
+      comment: ['', [Validators.required, Validators.minLength(35)]],
+    });
+  }
+  onSubmit() {
+    console.log(this.rfFormContact);
   }
   @HostListener('window:scroll', [])
   onWindowScroll() {

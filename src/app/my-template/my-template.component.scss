@@ -4,7 +4,10 @@
   height: 110px;
   transition: 0.7s; // border: 1px solid red;
 }
+.nav-out{
+  outline: 0;
 
+}
 .ngx-toggle{
   margin-top: 25px;
 }
@@ -415,4 +418,10 @@ color: #444444;
 }
 .text-p{
   padding-bottom: 18px;
+}
+.my-title>p{
+  font-style: italic;
+  color: red;
+  font-size: 0.95rem;
+  font-weight: 500;
 }

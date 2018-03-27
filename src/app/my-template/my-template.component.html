@@ -21,21 +21,19 @@
             <div class="collapse navbar-collapse menu-right" id="navbarNavDropdown">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a pageScroll class="nav-link" href="#about">About</a>
+                  <a pageScroll class="nav-link nav-out" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                  <a pageScroll class="nav-link" href="#contact">Contact</a>
+                  <a pageScroll class="nav-link nav-out" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Portfolio</a>
+                  <a class="nav-link nav-out" href="#">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" (click)="openDialog()">Login</a>
+                  <a class="nav-link nav-out" href="#" (click)="openDialog()">Login</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" (click)="openForRg()">Register</a>
-                </li>
-                <li class="nav-item dropdown">
+                  <a class="nav-link nav-out" href="#" (click)="openForRg()">Register</a>
                 </li>
               </ul>
             </div>
@@ -413,27 +411,45 @@
       </div>
       <div class="  col-md-7 col-lg-7">
         <!-- form require -->
-        <form action="">
+        <form action="" [formGroup]="rfFormContact" (ngSubmit)="onSubmit()">
           <div class="row">
             <div class=" col-sm-6 col-md-6 col-lg-6">
               <div class="form-group group-p">
-                <input type="text" name="name" id="name" class="form-control focus-f" placeholder="Your Name" aria-describedby="helpId">
+                <input type="text" name="name" id="name" formControlName="name" class="form-control focus-f" placeholder="Your Name" aria-describedby="helpId">
+                <div [ngClass]="{'my-title':color1}">
+                  <p *ngIf="rfFormContact.get('name').hasError('required') && rfFormContact.get('name')?.touched">Name null !</p>
+                  <p *ngIf="rfFormContact.get('name').hasError('minlength') && rfFormContact.get('name')?.touched">min length 6 !</p>
+                </div>
               </div>
+
             </div>
             <div class=" col-sm-6 col-md-6 col-lg-6">
               <div class="form-group group-p">
-                <input type="text" name="mail" id="mail" class="form-control focus-f" placeholder="Your Email" aria-describedby="helpId">
+                <input type="text" name="mail" id="mail" formControlName="email" class="form-control focus-f" placeholder="Your Email" aria-describedby="helpId">
+                <div [ngClass]="{'my-title':color1}">
+                  <p *ngIf="rfFormContact.get('email').hasError('required') && rfFormContact.get('email')?.touched">Email null !</p>
+                  <p *ngIf="rfFormContact.get('email').hasError('email') && rfFormContact.get('email')?.touched"> Email wrong !</p>
+                </div>
               </div>
             </div>
           </div>
           <div class="form-group group-p">
-            <input type="text" name="title" id="title" class="form-control focus-f" placeholder="Your Title" aria-describedby="helpId">
+            <input type="text" name="title" id="title" formControlName="title" class="form-control focus-f" placeholder="Your Title"
+              aria-describedby="helpId">
+              <div [ngClass]="{'my-title':color1}">
+                  <p *ngIf="rfFormContact.get('title').hasError('required') && rfFormContact.get('title')?.touched">Title null !</p>
+                  <p *ngIf="rfFormContact.get('title').hasError('minlength') && rfFormContact.get('title')?.touched">min length 10 !</p>
+              </div>
           </div>
           <div class="form-group group-p">
-            <textarea class="form-control focus-f" name="comment" id="comment" rows="3" placeholder="Your Comment"></textarea>
+            <textarea class="form-control focus-f" formControlName="comment" name="comment" id="comment" rows="3" placeholder="Your Comment"></textarea>
+          </div>
+          <div [ngClass]="{'my-title':color1}">
+              <p *ngIf="rfFormContact.get('comment').hasError('required') && rfFormContact.get('comment')?.touched">comment null !</p>
+              <p *ngIf="rfFormContact.get('comment').hasError('minlength') && rfFormContact.get('comment')?.touched">min length 35 !</p>
           </div>
           <a href="#" class="dowloadCk">
-            <button type="button" class="btn btn-dark">Send Message</button>
+            <button type="submit" class="btn btn-dark" [disabled]="rfFormContact.invalid">Message</button>
           </a>
         </form>
         <!-- endform  -->

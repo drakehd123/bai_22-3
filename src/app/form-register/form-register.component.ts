@@ -29,6 +29,8 @@ export function comparepassword(v: AbstractControl) {
 })
 export class FormRegisterComponent implements OnInit {
   rfFormRg: FormGroup;
+  hide = true;
+  hide1 = true;
   constructor(
     public dialogGis: MatDialogRef<FormRegisterComponent>,
     public dialog2: MatDialog,

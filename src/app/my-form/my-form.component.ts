@@ -12,6 +12,7 @@ import { FormGroup, FormControl, Validators, FormBuilder, FormArray } from '@ang
 })
 export class MyFormComponent implements OnInit {
   rfForm: FormGroup;
+  hide = true;
   constructor(
     public dialogRef: MatDialogRef<MyFormComponent>,
     public dialog: MatDialog,
@@ -38,7 +39,7 @@ export class MyFormComponent implements OnInit {
   onNoClickForm(): void {
     this.dialogRef.close();
     const dialogRef = this.dialog.open(LoginsuccesComponent, {
-      width: '550px',
+      width: '350px',
       // height: '550px',
       // disableClose: false,
     });
@@ -47,7 +48,8 @@ export class MyFormComponent implements OnInit {
 }
 @Component({
   selector: 'app-my-loginsucces',
-  template: '<p>login success</p>',
+  template: '<p>Login success</p>',
+  styles: ['p{text-align:center;color:green;font-site:25px}'],
 })
 export class LoginsuccesComponent {
 

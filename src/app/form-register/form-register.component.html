@@ -1,52 +1,57 @@
 <form action="" (ngSubmit)="onSubmit()" novalidate [formGroup]="rfFormRg">
-    <h1 mat-dialog-title> Sign Up </h1>
-    <p>Name</p>
+  <h1 mat-dialog-title> Sign Up </h1>
+  <p>Name</p>
+  <mat-form-field class="example-full-width">
+    <!-- <input matInput [(ngModel)]="data.animal" type="email"> -->
+    <input matInput value="" type="text" formControlName="name">
+  </mat-form-field>
+  <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.get('name').hasError('required') && rfFormRg.get('name')?.touched">
+    name required
+  </div>
+  <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.get('name').hasError('invalidname') && rfFormRg.get('name')?.touched">
+    invalid name
+  </div>
+  <p>Email</p>
+  <mat-form-field class="example-full-width">
+    <!-- <input matInput [(ngModel)]="data.animal" type="email"> -->
+    <input matInput value="" type="email" formControlName="email">
+  </mat-form-field>
+  <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.get('email').hasError('required') && rfFormRg.get('email')?.touched">
+    email required
+  </div>
+  <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.get('email').hasError('email') && rfFormRg.get('email')?.touched">
+    email not fomat !
+  </div>
+  <p>PassWord</p>
+  <!-- - -->
+  <div formGroupName="pw">
     <mat-form-field class="example-full-width">
-      <!-- <input matInput [(ngModel)]="data.animal" type="email"> -->
-      <input matInput value="" type="text" formControlName="name">
-    </mat-form-field>
-    <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.get('name').hasError('required') && rfFormRg.get('name')?.touched">
-       name required
-    </div>
-    <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.get('name').hasError('invalidname') && rfFormRg.get('name')?.touched">
-       invalid name
-     </div>
-    <p>Email</p>
-    <mat-form-field class="example-full-width">
-      <!-- <input matInput [(ngModel)]="data.animal" type="email"> -->
-      <input matInput value="" type="email" formControlName="email">
-    </mat-form-field>
-    <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.get('email').hasError('required') && rfFormRg.get('email')?.touched">
-      email required
-    </div>
-    <p>PassWord</p>
-    <!-- - -->
-    <div formGroupName="pw">
-    <mat-form-field class="example-full-width">
-      <input matInput value="" type="password" formControlName="pass">
+      <input matInput value="" type="password" formControlName="pass" [type]="hide ? 'password' : 'text'">
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
     </mat-form-field>
     <!-- <div class="alert alert-danger" role="alert" *ngIf="rfFormRg.get('pass').hasError('required') && rfFormRg.get('pass')?.touched">
         password required
     </div> -->
     <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.get('pw.pass').hasError('minlength') && rfFormRg.touched">
-        min length 6
+      min length 6
     </div>
     <p>Confirm password</p>
     <mat-form-field class="example-full-width">
-        <input matInput value="" type="password" formControlName="pass2">
-      </mat-form-field>
-      <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.get('pw').hasError('passwordnotmath') && rfFormRg.get('pw')?.touched">
-        password not math !
-      </div>
+      <input matInput value="" type="password" formControlName="pass2" [type]="hide1 ? 'password' : 'text'">
+      <mat-icon matSuffix (click)="hide1 = !hide1">{{hide1 ? 'visibility' : 'visibility_off'}}</mat-icon>
+    </mat-form-field>
+    <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.get('pw').hasError('passwordnotmath') && rfFormRg.get('pw')?.touched">
+      password not math !
     </div>
-    <div mat-dialog-actions>
-      <button mat-raised-button color="warn" (click)="onNoClick()">No Thanks</button>
-      <button mat-raised-button color="accent" [disabled]="rfFormRg.invalid">Register</button>
-      <button mat-raised-button color="primary" type="submit">Resset</button>
-    </div>
-  </form>
-  <!-- <pre>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="warn" (click)="onNoClick()">No Thanks</button>
+    <button mat-raised-button color="accent" [disabled]="rfFormRg.invalid">Register</button>
+    <button mat-raised-button color="primary" type="submit">Resset</button>
+  </div>
+</form>
+<!-- <pre>
   {{rfFormRg.value | json}}
   </pre> -->
 
-  <!-- <p>{{ rfFormRg.controls?.email.errors | json}}</p> -->
+<!-- <p>{{ rfFormRg.controls?.email.errors | json}}</p> -->

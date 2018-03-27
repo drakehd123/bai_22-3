@@ -11,6 +11,7 @@ import {MatButtonModule} from '@angular/material';
 import { ReactiveFormsModule} from '@angular/forms';
 
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
+import { MatIconModule } from '@angular/material';
 
 const allmodul = [
   MatDialogModule,
@@ -20,7 +21,8 @@ const allmodul = [
   BrowserAnimationsModule,
   MatButtonModule,
   ReactiveFormsModule,
-  Ng2PageScrollModule
+  Ng2PageScrollModule,
+  MatIconModule
 ];
 @NgModule({
   imports: [
