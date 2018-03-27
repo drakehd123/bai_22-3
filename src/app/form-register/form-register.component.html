@@ -8,7 +8,7 @@
     <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.get('name').hasError('required') && rfFormRg.get('name')?.touched">
        name required
     </div>
-    <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.hasError('invalidname','name') && rfFormRg.get('name')?.touched">
+    <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.get('name').hasError('invalidname') && rfFormRg.get('name')?.touched">
        invalid name
      </div>
     <p>Email</p>
@@ -35,7 +35,7 @@
     <mat-form-field class="example-full-width">
         <input matInput value="" type="password" formControlName="pass2">
       </mat-form-field>
-      <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.hasError('passwordnotmath','pw') && rfFormRg.get('pw')?.touched">
+      <div class="alert alert-warning" role="alert" *ngIf="rfFormRg.get('pw').hasError('passwordnotmath') && rfFormRg.get('pw')?.touched">
         password not math !
       </div>
     </div>

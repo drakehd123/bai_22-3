@@ -6,9 +6,15 @@ import { FormGroup, FormControl, Validators, FormBuilder, FormArray, AbstractCon
 
 export function foFindnamea(name = []) {
   return (c: AbstractControl) => {
+    // const  a = / /;
     return (name.includes(c.value)) ? { invalidname: true } : null;
   };
 }
+// export function noneSpaceValidator(name = []) {
+//   return (v: AbstractControl) => {
+//     return (v.value && v.value.trim()) ? {in: true} : null;
+//   };
+// }
 export function comparepassword(v: AbstractControl) {
   const a = v.value;
   return (a.pass === a.pass2) ? null : {
@@ -35,14 +41,18 @@ export class FormRegisterComponent implements OnInit {
 
   ngOnInit() {
     this.rfFormRg = this.rf.group({
-      name: ['', [Validators.required, foFindnamea(['admin', 'manager'])]],
+      name: ['', [
+              Validators.required,
+              foFindnamea(['admin', 'manager', 'Admin', 'ADMIN', 'Manager', 'MANAGER']),
+
+            ]],
       email: ['', [Validators.required, Validators.email]],
       pw: this.rf.group({
         pass: ['', [Validators.required, Validators.minLength(6)]],
-        pass2: ['', [Validators.required ]],
-        },
+        pass2: ['', [Validators.required]],
+      },
         {
-          validator : comparepassword
+          validator: comparepassword
         })
 
     });
